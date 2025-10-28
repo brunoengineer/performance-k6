@@ -1,0 +1,37 @@
+{
+  "metrics": {
+    "http_req_duration": {
+      "type": "trend",
+      "values": {
+        "avg": 240.12,
+        "min": 120.00,
+        "med": 210.50,
+        "max": 820.75,
+        "p(90)": 320.00,
+        "p(95)": 360.00,
+        "p(99)": 480.00
+      }
+    },
+    "http_req_failed": {
+      "type": "rate",
+      "values": { "rate": 0.003 }
+    },
+    "http_reqs": {
+      "type": "counter",
+      "values": { "count": 900, "rate": 90 }
+    },
+    "checks": {
+      "type": "rate",
+      "values": { "rate": 0.995 }
+    }
+  },
+  "thresholds": {
+    "http_req_duration": { "ok": true },
+    "http_req_failed": { "ok": true },
+    "checks": { "ok": true }
+  },
+  "metadata": {
+    "type": "example",
+    "note": "Illustrative only; not from a real run"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "performance-k6",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Modular k6 performance test template (Load, Spike, Stress)",
+  "scripts": {
+    "test:load": "cross-env ENV=dev LOG_LEVEL=info k6 run src/tests/load.test.js",
+    "test:spike": "cross-env ENV=dev LOG_LEVEL=info k6 run src/tests/spike.test.js",
+    "test:stress": "cross-env ENV=dev LOG_LEVEL=info k6 run src/tests/stress.test.js",
+    "test:load:smoke": "cross-env ENV=dev LOG_LEVEL=info SMOKE=1 k6 run src/tests/load.test.js",
+    "test:spike:smoke": "cross-env ENV=dev LOG_LEVEL=info SMOKE=1 k6 run src/tests/spike.test.js",
+    "test:stress:smoke": "cross-env ENV=dev LOG_LEVEL=info SMOKE=1 k6 run src/tests/stress.test.js",
+    "test:load:staging": "cross-env ENV=staging LOG_LEVEL=info k6 run src/tests/load.test.js",
+    "test:spike:staging": "cross-env ENV=staging LOG_LEVEL=info k6 run src/tests/spike.test.js",
+    "test:stress:staging": "cross-env ENV=staging LOG_LEVEL=info k6 run src/tests/stress.test.js",
+    "test:load:prod": "cross-env ENV=prod LOG_LEVEL=warn k6 run src/tests/load.test.js",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --max-warnings=0",
+    "format": "prettier --write \"**/*.{js,json,md}\""
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3"
+  }
+}

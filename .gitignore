@@ -16,7 +16,9 @@ logs/
 .DS_Store
 Thumbs.db
 
-# k6 artifacts
-*.json
-*.html
-*.csv
+# k6 artifacts (do NOT ignore by default so docs/examples can be committed)
+# If you prefer to keep run outputs untracked, uncomment the lines below:
+# summary.json
+# summary.txt
+# run-summary.json
+# results/

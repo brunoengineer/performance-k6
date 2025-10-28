@@ -1,0 +1,5 @@
+{
+  "baseUrl": "https://test.k6.io",
+  "timeoutMs": 45000,
+  "retries": 2
+}
